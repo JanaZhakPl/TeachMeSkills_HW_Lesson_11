@@ -1,13 +1,18 @@
 package com.teachmeskills.Lesson_11;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class SortingDocumnetNumbers {
 
     public static void main(String[] args)  {
+        System.out.println("Insert a File Path");
+        Scanner s = new Scanner(System.in);
+
         String line;
         try {
-            FileReader myFile = new FileReader("C:\\Users\\wikto\\OneDrive\\Рабочий стол\\information\\information.txt");
+            FileReader myFile = new FileReader(s.nextLine());
+            
             BufferedReader num = new BufferedReader(myFile);
             BufferedWriter validNums = new BufferedWriter(new FileWriter("validOutput.txt"));
             BufferedWriter invalidNums = new BufferedWriter(new FileWriter("invalidOutput.txt"));
